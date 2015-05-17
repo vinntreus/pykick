@@ -11,10 +11,20 @@
 	"folders":
 	[
 		{
-			"path": "src"
-		},
-		{
-			"path": "static"
+			"file_exclude_patterns":
+			[
+				".Python",
+				"Procfile",
+				"db.sqlite3",
+				".gitignore",
+				"requirements.txt",
+				"pykick.sublime-project"
+			],
+			"folder_exclude_patterns":
+			[
+				"venv"
+			],
+			"path": "."
 		}
 	]
 }

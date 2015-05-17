@@ -1,6 +1,6 @@
 .Python
-bin/
-include/
-lib/
+venv/
 *.sqlite3
 *.pyc
+*.so
+*.sublime-workspace
