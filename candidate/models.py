@@ -6,7 +6,10 @@ import json
 class History(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     version = models.PositiveIntegerField()
-    events = []
+
+    def __init__(self, *args, **kwargs):
+        super(History, self).__init__(*args, **kwargs)
+        self.events = []
 
     def apply(self, event_func, **kwargs):
         e = Event(agg_id=self.uuid,
@@ -21,8 +24,8 @@ class History(models.Model):
             self.version += 1
             e.version = self.version
             e.save()
-        super(History, self).save(*args, **kwargs)
         self.events = []
+        super(History, self).save(*args, **kwargs)
 
     def load_events(self):
         return get_events(self.__class__.__name__, self.uuid)
