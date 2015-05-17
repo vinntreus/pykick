@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <nav>
+        <a href="{% url 'candidate' c.id %}">Back</a>
+    </nav>
+    <h1>{{ title }}</h1>
+    <label>Current value:</label><span>{{ current_value }}</span>
+    <form method="POST" action="" >{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update" />
+    </form>
+{% endblock %}

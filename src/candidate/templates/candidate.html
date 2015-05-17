@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load humanize humanize_extras %}
+
+{% block content%}
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+
+    <h1>{{ c.name }}</h1>
+
+    <div class="update">
+        <label>Name: </label><span>{{ c.name }} </span>
+        <a href="{% url 'update_candidate' candidate_id=c.id field='name' %}">Update name</a>
+    </div>
+
+    <div class="update">
+        <label>Email: </label><span>{{ c.email }} </span>
+        <a href="{% url 'update_candidate' candidate_id=c.id field='email' %}">Update email</a>
+    </div>
+
+    <h2>History</h2>
+    <ul>
+        {% for e in events %}
+        <li>{{ e.name | humanize_words }} <i>{{ e.ts | naturaltime }}</i> with {{ e.data }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

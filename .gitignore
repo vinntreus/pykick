@@ -1,0 +1,6 @@
+.Python
+bin/
+include/
+lib/
+*.sqlite3
+*.pyc
