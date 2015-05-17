@@ -4,13 +4,19 @@
 <head>
     <meta charset="utf-8"/>
     <title>Sidekick - Start</title>
+    <link href="/static/site.css" rel="stylesheet" />
 </head>
-<body>{% if messages %}
-    <ul class="messages">
+<body>
+    <header class="row">
+        <div class="six">Sidekick</div>
+    </header>
+    {% if messages %}
         {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        <div{% if message.tags %} class="block {{ message.tags }}"{% endif %}>{{ message }}</div>
         {% endfor %}
-    </ul>{% endif %}{% block content %}{% endblock %}
+    {% endif %}
+
+    {% block content %}{% endblock %}
 </body>
 </html>
 {% endspaceless %}

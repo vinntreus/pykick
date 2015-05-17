@@ -2,26 +2,53 @@
 {% load humanize humanize_extras %}
 
 {% block content%}
-    <nav>
-        <a href="{% url 'home' %}">Home</a>
-    </nav>
-
-    <h1>{{ c.name }}</h1>
-
-    <div class="update">
-        <label>Name: </label><span>{{ c.name }} </span>
-        <a href="{% url 'update_candidate' candidate_id=c.id field='name' %}">Update name</a>
+    <div class="row">
+        <div class="six">
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+            </nav>
+        </div>
     </div>
 
-    <div class="update">
-        <label>Email: </label><span>{{ c.email }} </span>
-        <a href="{% url 'update_candidate' candidate_id=c.id field='email' %}">Update email</a>
-    </div>
+    <div class="cf">
+        <div class="four">
+            <div class="box">
+                <div class="box-header block">
+                    <h2>{{ c.name }}</h2>
+                </div>
+                <div class="box-body block">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td>{{ c.name }}</td>
+                            <td>
+                            <a class="btn" href="{% url 'update_candidate' candidate_id=c.id field='name' %}">Update name</a></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>{{ c.email }}</td>
+                            <td><a class="btn" href="{% url 'update_candidate' candidate_id=c.id field='email' %}">Update email</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-    <h2>History</h2>
-    <ul>
-        {% for e in events %}
-        <li>{{ e.name | humanize_words }} <i>{{ e.ts | naturaltime }}</i> with {{ e.data }}</li>
-        {% endfor %}
-    </ul>
+        <div class="two">
+            <div class="box">
+                <div class="box-header block">
+                    <h2>History</h2>
+                </div>
+                <div class="box-body block">
+                    <ul>
+                        {% for e in events %}
+                        <li>{{ e.name | humanize_words }} <i>{{ e.ts | naturaltime }}</i> with {{ e.data }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
 {% endblock %}

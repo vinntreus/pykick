@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Sidekick</h1>
-    <a href="{% url 'create_candidate' %}">Create candidate</a>
-    <ul>
-        {% for c in candidates %}
-        <li><a href="{% url 'candidate' c.id %}">{{ c.name }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="row">
+        <div class="six">
+            <div class="box">
+                <div class="box-header block">
+                    <a href="{% url 'create_candidate' %}" class="btn">Create candidate</a>
+                    <h2>Candidates</h2>
+                </div>
+                <div class="box-body block">
+                    <ul>
+                        {% for c in candidates %}
+                        <li><a href="{% url 'candidate' c.id %}">{{ c.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
