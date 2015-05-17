@@ -14,3 +14,8 @@
 
 ## Start server
  python manage.py runserver
+
+## Heroku links
+[Getting started with django](https://devcenter.heroku.com/articles/getting-started-with-django)
+[Heroku postgres](https://devcenter.heroku.com/articles/heroku-postgresql)
+
