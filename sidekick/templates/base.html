@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8"/>
     <title>Sidekick - Start</title>
-    <link href="/static/site.css" rel="stylesheet" />
+    {% load staticfiles %}
+    <link href="{% static "site.css" %}" rel="stylesheet" />
 </head>
 <body>
     <header class="row">
