@@ -5,3 +5,4 @@ staticfiles/
 *.pyc
 *.so
 *.sublime-workspace
+*_local.py
