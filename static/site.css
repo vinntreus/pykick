@@ -10,7 +10,7 @@ body{
 
 header{
     position:fixed;
-    background-color:#607D8B;
+    background-color:#2196F3;
     box-shadow:0 2px 5px rgba(0,0,0,0.26);
     color:#FAFAFA;
     width:100%;
@@ -81,7 +81,8 @@ a:hover{
     box-shadow:0 2px 5px rgba(0,0,0,0.16);
 }
 .box-header{
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #EEEEEE;
 }
 .box-header h2{
     font-size: 24px;
