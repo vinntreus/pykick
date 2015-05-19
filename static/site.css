@@ -16,6 +16,13 @@ header{
     width:100%;
     top:0;
 }
+header a{
+    text-decoration: none;
+    color:#fff;
+}
+header a:hover{
+    color:#EEEEEE;
+}
 
 ul{
     list-style: none;
@@ -29,6 +36,9 @@ ul > li{
 a{
     color:#616161;
     font-size: 14px;
+}
+a:hover{
+    color:#000;
 }
 .btn{
     background: #455463;
@@ -89,6 +99,12 @@ a{
     background-color: #43A047;
     border-color: #81C784;
     color: #FFFFFF;
+}
+
+.error{
+    background-color:#F44336;
+    border-color: #C62828;
+    color:#FFFFFF;
 }
 
 .left,
