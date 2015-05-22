@@ -52,6 +52,9 @@ a:hover{
     text-decoration: none;
     display: inline-block;
 }
+a.btn:hover{
+    color:#fff;
+}
 
 .block{
     padding:16px;
@@ -82,12 +85,13 @@ a:hover{
 }
 .box-header{
     border-bottom: 1px solid #E0E0E0;
-    background-color: #EEEEEE;
+    color:#424242;
 }
 .box-header h2{
     font-size: 24px;
     margin:0;
     display: inline-block;
+    font-weight: normal;
 }
 .box-header a{
     float:right;
