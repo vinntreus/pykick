@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.contrib import auth, messages
 from django.http import HttpResponseRedirect
-from candidate.models import get_candidates
+from candidate.models import list_candidates
 
 
 def home(request):
     context = {
-        'candidates': get_candidates()
+        'candidates': list_candidates()
     }
     return render(request, 'startpage.html', context)
 

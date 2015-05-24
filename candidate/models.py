@@ -67,7 +67,7 @@ def get_candidate(id):
     return Candidate.objects.get(id=id)
 
 
-def get_candidates():
+def list_candidates():
     return Candidate.objects.all()
 
 
